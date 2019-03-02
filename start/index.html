@@ -16,11 +16,12 @@
     -->
 
     <!-- include a-frame -->
-    <script src="https://mnutsch.github.io/arjs_workshop/start/vendor/aframe/build/aframe.min.js"></script>
+    <script src="https://github.com/stpalmer2/augmented_reality_workshop_arjs/blob/master/start/vendor/aframe/build/aframe.min.js"></script>
 
+      
     <!-- include ar.js for aframe -->
-    <script src='https://mnutsch.github.io/arjs_workshop/start/vendor/arjs/build/aframe-ar.js'></script>
-    <script>ARjs.Context.baseURL = 'https://mnutsch.github.io/arjs_workshop/start/vendor/three.js/'</script>
+    <script src='https://github.com/stpalmer2/augmented_reality_workshop_arjs/blob/master/start/vendor/arjs/build/aframe-ar.js'></script>
+    <script>ARjs.Context.baseURL = 'https://github.com/stpalmer2/augmented_reality_workshop_arjs/tree/master/start/vendor/three.js'</script>
     <!-- Note: the above libraries are included with absolute URL's, because Github.io seems to prefer those. Change them to relative URL's -->
 
     <script>		
@@ -64,9 +65,9 @@
         <!-- Declare assets here. These are things like images or 3D models. -->    
         
         <!-- Example of how to declare a 3D model asset. -->
-        <!--<a-asset-item id="3DModel-obj" src="3Dmodel.obj"></a-asset-item preload="auto">-->
+        <a-asset-item id="girl-obj" src="girl/girl.obj"><!----</a-asset-item preload="auto">
         <!-- Example of how to declare a skin for a 3D model asset. -->
-        <!--<a-asset-item id="3DModel-mtl" src="3DModel.mtl"></a-asset-item>-->
+        <a-asset-item id="girl-mtl" src="girl/girl.mtl"></a-asset-item>
       
       </a-assets>
 
@@ -96,7 +97,7 @@
 
         <!-- Basic Box -->             
         <!-- see: https://aframe.io/docs/0.8.0 -->
-        <a-box id="myBox" rotation="0 0 0" position='0 0.5 0' depth="1" height="1" width="1" material='opacity: 0.5; side:double; color:blue;'></a-box>
+        <!----<a-box id="myBox" rotation="0 0 0" position='0 0.5 0' depth="1" height="1" width="1" material='opacity: 0.5; side:double; color:blue;'></a-box>-->
         
         <!-- Basic Sphere --> 
         <!-- see: https://aframe.io/docs/0.8.0/primitives/a-sphere.html -->
@@ -106,7 +107,7 @@
         <!-- see: https://aframe.io/docs/0.8.0/primitives/a-obj-model.html -->
         <!--<a-obj-model id="my3DModel" src="#3DModel-obj" position="0 0 0" rotation="0 0 0" scale=".1 .1 .1" material="opacity: 0.9; side:double; color: orange;"></a-obj-model>-->
         <!-- 3D Model example with skin -->
-        <!--<a-obj-model id="my3DModel" src="#3DModel-obj" mtl="#3DModel-mtl" position="0 0 0" rotation="0 0 0" scale="1 1 1" material="opacity: 1.0; side:double;"></a-obj-model>-->
+        <a-obj-model id="girl" src="#girl-obj" mtl="#girl-mtl" position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5" material="opacity: 1.0; side:double;"></a-obj-model>
         
       </a-anchor>
 
